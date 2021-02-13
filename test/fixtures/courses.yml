@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  seat_limit: 1
+  week_day: MyString
+  time: 1
+  instructor: one
+
+two:
+  name: MyString
+  seat_limit: 1
+  week_day: MyString
+  time: 1
+  instructor: two
