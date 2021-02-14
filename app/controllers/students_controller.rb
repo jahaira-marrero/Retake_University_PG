@@ -14,7 +14,12 @@ class StudentsController < ApplicationController
 
     def create
         @student = Student.create(student_params)
-        redirect_to student_path(@student)
+        if @student.valid?
+        redirect_to student_path(@student) 
+        else
+          flash[:errors] = @student.errors.full_messages
+          redirect_to new_student_path  
+        end
     end
 
     def update
