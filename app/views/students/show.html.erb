@@ -1,0 +1,16 @@
+<h1> <%= @students.name %> </h1>
+
+<h2> Major - <%= @students.major %> </h2>
+<h2> Age - <%= @students.age %> </h2>
+
+<hr> 
+
+<h1> Registered Courses </h1> 
+
+<ol> 
+    <% @students.courses.each do |course_inst| %>
+    <li> 
+        <%= course_inst.name %>
+    </li>
+    <% end %>
+</ol>

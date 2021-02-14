@@ -35,7 +35,7 @@ class OfficeHoursController < ApplicationController
     private
 
     def officehour_params
-        params.require(:officehour).permit(:name, :age, :major)
+        params.require(:officehour).permit(:time, :week_day, :instructor_id)
     end
 
 end
