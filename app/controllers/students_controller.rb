@@ -1,21 +1,16 @@
 class StudentsController < ApplicationController
 
-
     def index
         @students = Student.all
     end
-
 
     def show
         @students = Student.find(params[:id])
     end
 
-
     def new 
         @student = Student.create
     end
-
-    
 
     def create
         @student = Student.create(student_params)
@@ -37,17 +32,10 @@ class StudentsController < ApplicationController
         redirect_to students_path
     end
 
-
-
-
     private
-
 
     def student_params
         params.require(:student).permit(:name, :age, :major)
     end
-
-
-
 
 end
