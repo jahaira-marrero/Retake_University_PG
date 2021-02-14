@@ -5,7 +5,7 @@ class OfficeHoursController < ApplicationController
     end
 
     def show
-        @officehours = OfficeHour.find(params[:id])
+        @officehour = OfficeHour.find(params[:id])
     end
 
     def new 

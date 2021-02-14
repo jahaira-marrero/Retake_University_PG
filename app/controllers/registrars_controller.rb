@@ -5,7 +5,7 @@ class RegistrarsController < ApplicationController
     end
 
     def show
-        @registrars = Registrar.find(params[:id])
+        @registrar = Registrar.find(params[:id])
     end
 
     def new 

@@ -3,7 +3,7 @@
 <ol> 
     <% @students.each do |student| %>
      <li>
-        <%= student.name %>
+        <%= link_to student.name, student_path(student) %>
         <%end%>
     </li>
      

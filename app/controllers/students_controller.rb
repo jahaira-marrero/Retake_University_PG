@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
     end
 
     def show
-        @students = Student.find(params[:id])
+        @student = Student.find(params[:id])
     end
 
     def new 
@@ -24,7 +24,12 @@ class StudentsController < ApplicationController
 
     def update
         @student = Student.find(params[:id])
-        @student.update(student_params)
+        if @student.update(student_params)
+            redirect_to student_path(@student)
+        else
+            flash[:errors] = @student.errors.full_messages
+            redirect_to edit_student_path(@student)
+        end
     end
 
     def edit

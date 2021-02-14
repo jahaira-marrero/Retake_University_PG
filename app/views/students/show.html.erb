@@ -1,16 +1,22 @@
-<h1> <%= @students.name %> </h1>
+<h1> <%= @student.name %> </h1>
 
-<h2> Major - <%= @students.major %> </h2>
-<h2> Age - <%= @students.age %> </h2>
+<h2> Major - <%= @student.major %> </h2>
+<h2> Age - <%= @student.age %> </h2>
 
 <hr> 
 
 <h1> Registered Courses </h1> 
 
 <ol> 
-    <% @students.courses.each do |course_inst| %>
+    <% @student.courses.each do |course_inst| %>
     <li> 
         <%= course_inst.name %>
     </li>
     <% end %>
 </ol>
+
+<hr> 
+
+<%= button_to "Delete Student", student_path(@student), method: "delete" %>
+<br>
+<%= link_to "Back to Students", students_path %>
