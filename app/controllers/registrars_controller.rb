@@ -5,7 +5,7 @@ class RegistrarsController < ApplicationController
     end
 
     def show
-        @registrars = Registrar.find(params[:id])
+        @registrar = Registrar.find(params[:id])
     end
 
     def new 
@@ -35,7 +35,7 @@ class RegistrarsController < ApplicationController
     private
 
     def registrar_params
-        params.require(:registrar).permit(:name, :age, :major)
+        params.require(:registrar).permit(:student_id, :course_id)
     end
 
 end

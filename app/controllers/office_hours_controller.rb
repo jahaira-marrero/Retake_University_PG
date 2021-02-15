@@ -5,7 +5,7 @@ class OfficeHoursController < ApplicationController
     end
 
     def show
-        @officehours = OfficeHour.find(params[:id])
+        @officehour = OfficeHour.find(params[:id])
     end
 
     def new 
@@ -35,7 +35,7 @@ class OfficeHoursController < ApplicationController
     private
 
     def officehour_params
-        params.require(:officehour).permit(:name, :age, :major)
+        params.require(:officehour).permit(:time, :week_day, :instructor_id)
     end
 
 end
