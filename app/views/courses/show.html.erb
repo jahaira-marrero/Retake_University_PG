@@ -1,0 +1,10 @@
+<h1> <%= @course.name %> Information </h1>
+<br>
+<h3>Seat Limit: <%= @course.seat_limit %> </h3>
+<br>
+<h3>Instructor: <%= @course.instructor.name %> </h3>
+<br>
+<h3>Schedule: <%= @course.week_day%> - <%=@course.time %> </h3>
+
+<br>
+<%= link_to "Back to Courses", courses_path %>
