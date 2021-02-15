@@ -32,9 +32,7 @@ class RegistrarsController < ApplicationController
         redirect_to registrars_path
     end
 
-    def enroll 
-        
-    end
+   
 
     private
 

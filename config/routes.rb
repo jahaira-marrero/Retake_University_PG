@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
 
   # resources :courses
-
+  patch '/courses/:id/enroll', to: 'courses#enroll', as: 'enroll_course'
 
   get '/courses', to: 'courses#index', as: "courses"
   get '/courses/new', to: 'courses#new', as: "new_course"
@@ -37,6 +37,8 @@ Rails.application.routes.draw do
   get '/courses/:id/edit', to: 'courses#edit', as: "edit_course"
   patch '/courses/:id', to: 'courses#update'
   delete '/courses/:id', to: 'courses#destroy'
+
+  
 
 
   # resources :students
