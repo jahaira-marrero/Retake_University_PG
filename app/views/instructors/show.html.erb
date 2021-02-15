@@ -1,0 +1,13 @@
+<h1> Instructor Information </h1>
+
+<h3> <%= @instructor.name %> </h3> 
+
+<hr>
+<h4> <p>  Courses </p> </h4>
+
+<ul>
+    <% @instructor.courses.each do |instructor_inst| %>
+        <li> <%= instructor_inst.name %>  </li>
+    <%end%>
+
+</ul>
