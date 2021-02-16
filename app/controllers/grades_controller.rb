@@ -31,6 +31,8 @@ class GradesController < ApplicationController
 
     def edit
         @grade = Grade.find(params[:id])
+        @student = Student.all
+        @course = Course.all
     end
 
     def destroy

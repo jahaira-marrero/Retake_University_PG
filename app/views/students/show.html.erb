@@ -10,7 +10,7 @@
 <ol> 
     <% @student.grades.each do |grade_inst| %>
     <li> 
-        <%= grade_inst.course.name %> - <%= grade_inst.grade_value%>
+        <%= link_to grade_inst.course.name, course_path(grade_inst) %> - <%= grade_inst.grade_value%>
     </li>
     <% end %>
 </ol>
