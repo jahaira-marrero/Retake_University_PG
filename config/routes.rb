@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # resources :grades
-  
+
   # resources :office_hours
   get '/officehours', to: 'officehours#index', as: "officehours"
   get '/officehours/new', to: 'officehours#new', as: "new_officehour"

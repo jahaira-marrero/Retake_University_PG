@@ -1,0 +1,11 @@
+<h1> Create a New Grade Value </h1>
+
+<%= form_for @grade do |f| %>
+    <%= f.label :student_id %>
+    <%= f.collection_select :student_id, @students, :id, :name %>
+    <%= f.label :course_id %>
+    <%= f.collection_select :course_id, @courses, :id, :name %>
+    <%= f.label :grade_value %>
+    <%= f.collection_select :grade_value, (1..10).to_a, :itself, :itself %>
+    <%= f.submit %>
+<% end %>

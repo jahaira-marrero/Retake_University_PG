@@ -5,12 +5,12 @@
 
 <hr> 
 
-<h1> Registered Courses </h1> 
+<h1> Course Grades </h1> 
 
 <ol> 
-    <% @student.courses.each do |course_inst| %>
+    <% @student.grades.each do |grade_inst| %>
     <li> 
-        <%= course_inst.name %>
+        <%= grade_inst.course.name %> - <%= grade_inst.grade_value%>
     </li>
     <% end %>
 </ol>
