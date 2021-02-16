@@ -9,3 +9,9 @@
     <%= f.collection_select :grade_value, (1..10).to_a, :itself, :itself %>
     <%= f.submit %>
 <% end %>
+<br>
+<%= button_to "Delete Grade", grade_path(@grade), method: "delete" %>
+<br>
+<%= link_to "Back to Students", students_path %>
+<br>
+<%= link_to "Back to Courses", courses_path %>

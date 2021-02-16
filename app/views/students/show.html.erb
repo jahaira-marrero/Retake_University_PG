@@ -10,13 +10,22 @@
 <ol> 
     <% @student.grades.each do |grade_inst| %>
     <li> 
-        <%= link_to grade_inst.course.name, course_path(grade_inst) %> - <%= grade_inst.grade_value%>
+        <%= link_to grade_inst.course.name, course_path(grade_inst.course) %> - <%= grade_inst.grade_value%>
     </li>
     <% end %>
 </ol>
 
 <hr> 
 
-<%= button_to "Delete Student", student_path(@student), method: "delete" %>
+
+<br>
+<%= link_to "Edit Student", edit_student_path %>
 <br>
 <%= link_to "Back to Students", students_path %>
+<br>
+<%= link_to "Enroll in a Course", new_grade_path%>
+<br>
+<%= link_to "Go to Courses", courses_path %>
+<br>
+<%= button_to "Delete Student", student_path(@student), method: "delete" %>
+

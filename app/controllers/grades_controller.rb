@@ -38,7 +38,7 @@ class GradesController < ApplicationController
     def destroy
         @grade = Grade.find(params[:id])
         @grade.destroy 
-        redirect_to grades_path
+        redirect_to student_path
     end
 
     private
