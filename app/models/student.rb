@@ -1,6 +1,6 @@
 class Student < ApplicationRecord
-    has_many :registrars, dependent: :destroy
-    has_many :courses, through: :registrars
+    has_many :grades, dependent: :destroy
+    has_many :courses, through: :grades
 
     validates :name, presence: true, uniqueness: true
     validates :age, numericality: {less_than: 80, message: "You're too old!"}

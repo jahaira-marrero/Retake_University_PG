@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # resources :grades
+  
   # resources :office_hours
   get '/officehours', to: 'officehours#index', as: "officehours"
   get '/officehours/new', to: 'officehours#new', as: "new_officehour"
@@ -8,16 +10,16 @@ Rails.application.routes.draw do
   patch '/officehours/:id', to: 'officehours#update'
   delete '/officehours/:id', to: 'officehours#destroy'
 
-  # resources :registrars
-  get '/registrars', to: 'registrars#index', as: "registrars"
-  get '/registrars/new', to: 'registrars#new', as: "new_registrar"
-  post '/registrars', to: 'registrars#create'
-  get '/registrars/:id', to: 'registrars#show', as: "registrar"
-  get '/registrars/:id/edit', to: 'registrars#edit', as: "edit_registrar"
-  patch '/registrars/:id', to: 'registrars#update'
-  delete '/registrars/:id', to: 'registrars#destroy'
+  # resources :grades
+  get '/grades', to: 'grades#index', as: "grades"
+  get '/grades/new', to: 'grades#new', as: "new_grade"
+  post '/grades', to: 'grades#create'
+  get '/grades/:id', to: 'grades#show', as: "grade"
+  get '/grades/:id/edit', to: 'grades#edit', as: "edit_grade"
+  patch '/grades/:id', to: 'grades#update'
+  delete '/grades/:id', to: 'grades#destroy'
+  
   # resources :instructors
-
   get '/instructors', to: 'instructors#index', as: "instructors"
   get '/instructors/new', to: 'instructors#new', as: "new_instructor"
   post '/instructors', to: 'instructors#create'
