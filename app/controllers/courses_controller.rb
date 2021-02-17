@@ -6,6 +6,12 @@ class CoursesController < ApplicationController
 
     def show
         @course = Course.find(params[:id])
+        # if @course.open_seats(course_params)
+        #     redirect_to course_path(@course)
+        # else
+        #     flash[:errors] = @course.errors.full_messages
+        #     redirect_to new_grade_path(@course)
+        # end
     end
 
     def new 

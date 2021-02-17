@@ -8,14 +8,20 @@ class GradesController < ApplicationController
     end
 
     def new 
-        @grade = Grade.create
+        @grade = Grade.new
         @students = Student.all
         @courses = Course.all 
     end
 
     def create
-        @grade = Grade.create(grade_params)
-        redirect_to student_path(@grade.student_id)
+        course = Course.find(params[:grade][:course_id])
+        if course.open_seats > 0 && course.open_seats < 11 
+            grade = Grade.create(grade_params)
+            redirect_to student_path(grade.student_id)
+        else
+            redirect_to new_grade_path
+
+        end
      
     end
 

@@ -1,8 +1,9 @@
 <h1> <%= @course.name %> Information </h1>
 <br>
 <h3>Seat Limit: <%= @course.seat_limit() %> </h3>
+<h3> Open Seats: <%= @course.open_seats %> </h3>
 <br>
-<h3>Instructor: <%= @course.instructor.name %> </h3>
+<h3>Instructor: <%= link_to @course.instructor.name, instructor_path(@course.instructor) %> </h3>
 <br>
 <h3>Schedule: <%= @course.week_day %> - <%=@course.time %> </h3>
 <hr>

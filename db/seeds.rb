@@ -25,9 +25,9 @@ eric = Instructor.create(name: "Eric")
 sylwia = Instructor.create(name: "Sylwia")
 
 #Courses
-ruby = Course.create(name: "Ruby", seat_limit: 5, week_day: "Monday", time: 11, instructor_id: chase.id)
-ar = Course.create(name: "Active Record", seat_limit: 5, week_day: "Tuesday", time: 10, instructor_id: sylwia.id)
-rails = Course.create(name: "Rails", seat_limit: 8, week_day: "Wednesday", time: 9, instructor_id: eric.id)
+ruby = Course.create(name: "Ruby", seat_limit: 10, week_day: "Monday", time: 11, instructor_id: chase.id)
+ar = Course.create(name: "Active Record", seat_limit: 10, week_day: "Tuesday", time: 10, instructor_id: sylwia.id)
+rails = Course.create(name: "Rails", seat_limit: 10, week_day: "Wednesday", time: 9, instructor_id: eric.id)
 
 #Grades
 g1 = Grade.create(grade_value: 9, student_id: kwaku.id, course_id: ruby.id)
