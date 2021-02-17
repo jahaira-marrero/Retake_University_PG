@@ -19,7 +19,7 @@ class GradesController < ApplicationController
             grade = Grade.create(grade_params)
             redirect_to student_path(grade.student_id)
         else
-            # flash[:errors] = course.errors.full_messages
+            # flash[:errors] = errors.full_messages
             redirect_to new_grade_path
         end
     end

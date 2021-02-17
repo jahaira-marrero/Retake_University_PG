@@ -1,5 +1,14 @@
-<h1> Enroll in <%= @courses.name%> </h1>
+<h1> Enroll in Course </h1>
 
+<% if flash[:errors]%>
+    <ul>
+        <% flash[:errors].each do |error|%>
+        <li>
+            <%= error %>
+        </li>
+         <% end %>
+    </ul>
+<%end%>
 
 <%= form_for @grade do |f| %>
     <%= f.label :student_id %>
