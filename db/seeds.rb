@@ -35,8 +35,8 @@ g2 = Grade.create(grade_value: 9, student_id: andrew.id, course_id: rails.id)
 g3 = Grade.create(grade_value: 9, student_id: jahaira.id, course_id: ar.id)
 
 #Office Hours
-oh1 = OfficeHour.create(week_day: "Monday", time: 13, instructor_id: chase.id)
-oh2 = OfficeHour.create(week_day: "Tuesday", time: 14, instructor_id: sylwia.id)
-oh3 = OfficeHour.create(week_day: "Wednesday", time: 12, instructor_id: eric.id)
+t1 = Tutoring.create(week_day: "Monday", time: 13, instructor_id: chase.id)
+t2 = Tutoring.create(week_day: "Tuesday", time: 14, instructor_id: sylwia.id)
+t3 = Tutoring.create(week_day: "Wednesday", time: 12, instructor_id: eric.id)
 
 puts "You're good to go!"

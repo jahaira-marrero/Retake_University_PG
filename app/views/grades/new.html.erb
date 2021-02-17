@@ -1,5 +1,6 @@
 <h1> Enroll in <%= @courses.name%> </h1>
 
+
 <%= form_for @grade do |f| %>
     <%= f.label :student_id %>
     <%= f.collection_select :student_id, @students, :id, :name %>

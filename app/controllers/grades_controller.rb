@@ -19,20 +19,15 @@ class GradesController < ApplicationController
             grade = Grade.create(grade_params)
             redirect_to student_path(grade.student_id)
         else
+            # flash[:errors] = course.errors.full_messages
             redirect_to new_grade_path
-
         end
-     
     end
 
     def update
         @grade = Grade.find(params[:id])
-        if @grade.update(grade_params)
-            redirect_to grade_path(@grade)
-        else
-            flash[:errors] = @grade.errors.full_messages
-            redirect_to edit_grade_path(@grade)
-        end
+        @grade.update(grade_params)
+        redirect_to student_path(@grade.student_id)
     end
 
     def edit

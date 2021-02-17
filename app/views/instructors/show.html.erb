@@ -7,12 +7,18 @@
 
 <ul>
     <% @instructor.courses.each do |instructor_inst| %>
-        <li> <%= instructor_inst.name %>  </li>
+        <li> <%= link_to instructor_inst.name, course_path(instructor_inst) %>  </li>
     <%end%>
 
 </ul>
 
-<%= button_to "Delete Instructor", instructor_path(@instructor), method: "delete" %>
+<h2> Tutoring Schedule</h2>
+<hr>
+    <% @instructor.tutorings.each do |tutor|%>
+        <h3> <%= tutor.week_day %> at <%= tutor.time %> </h3>
+    <% end %>
+<br>
+<hr>
 <br>
 <%= link_to "Back to Instructors", instructors_path %>
 <br>

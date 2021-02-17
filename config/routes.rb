@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
+ 
   # resources :office_hours
-  get '/officehours', to: 'officehours#index', as: "officehours"
-  get '/officehours/new', to: 'officehours#new', as: "new_officehour"
-  post '/officehours', to: 'officehours#create'
-  get '/officehours/:id', to: 'officehours#show', as: "officehour"
-  get '/officehours/:id/edit', to: 'officehours#edit', as: "edit_officehour"
-  patch '/officehours/:id', to: 'officehours#update'
-  delete '/officehours/:id', to: 'officehours#destroy'
+  get '/tutorings', to: 'tutorings#index', as: "tutorings"
+  get '/tutorings/new', to: 'tutorings#new', as: "new_tutoring"
+  post '/tutorings', to: 'tutorings#create'
+  get '/tutorings/:id', to: 'tutorings#show', as: "tutoring"
+  get '/tutorings/:id/edit', to: 'tutorings#edit', as: "edit_tutoring"
+  patch '/tutorings/:id', to: 'tutorings#update'
+  delete '/tutorings/:id', to: 'tutorings#destroy'
 
   # resources :grades
   get '/grades', to: 'grades#index', as: "grades"
