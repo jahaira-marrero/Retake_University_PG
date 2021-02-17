@@ -33,6 +33,20 @@ rails = Course.create(name: "Rails", seat_limit: 10, week_day: "Wednesday", time
 g1 = Grade.create(grade_value: 9, student_id: kwaku.id, course_id: ruby.id)
 g2 = Grade.create(grade_value: 9, student_id: andrew.id, course_id: rails.id)
 g3 = Grade.create(grade_value: 9, student_id: jahaira.id, course_id: ar.id)
+g4 = Grade.create(grade_value: 9, student_id: milo.id, course_id: ruby.id)
+g5 = Grade.create(grade_value: 9, student_id: shooter.id, course_id: rails.id)
+g6 = Grade.create(grade_value: 9, student_id: buford.id, course_id: ar.id)
+g7 = Grade.create(grade_value: 9, student_id: morgan.id, course_id: ruby.id)
+g8 = Grade.create(grade_value: 9, student_id: jasmine.id, course_id: rails.id)
+g9 = Grade.create(grade_value: 9, student_id: glen.id, course_id: ar.id)
+g10 = Grade.create(grade_value: 9, student_id: charlotte.id, course_id: ar.id)
+g11 = Grade.create(grade_value: 9, student_id: kwaku.id, course_id: ar.id)
+g12 = Grade.create(grade_value: 9, student_id: milo.id, course_id: ar.id)
+g13 = Grade.create(grade_value: 9, student_id: andrew.id, course_id: ar.id)
+g14 = Grade.create(grade_value: 9, student_id: jasmine.id, course_id: ar.id)
+g15 = Grade.create(grade_value: 9, student_id: buford.id, course_id: rails.id)
+g16 = Grade.create(grade_value: 9, student_id: morgan.id, course_id: rails.id)
+
 
 #Office Hours
 t1 = Tutoring.create(week_day: "Monday", time: 13, instructor_id: chase.id)
