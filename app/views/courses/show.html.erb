@@ -3,7 +3,11 @@
 <h3>Seat Limit: <%= @course.seat_limit() %> </h3>
 <h3> Open Seats: <%= @course.open_seats %> </h3>
 <br>
+<<<<<<< HEAD
 <h3>Instructor: <%= link_to @course.instructor.name, instructor_path(@course.instructor) %> </h3>
+=======
+<h3>Instructor: <%= link_to @course.instructor.name,instructor_path %> </h3>
+>>>>>>> 58137fd2ac353d1f428ed8f0113825c2111c2189
 <br>
 <h3>Schedule: <%= @course.week_day %> - <%=@course.time %> </h3>
 <hr>
