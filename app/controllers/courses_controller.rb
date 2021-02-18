@@ -6,12 +6,6 @@ class CoursesController < ApplicationController
 
     def show
         @course = Course.find(params[:id])
-        # if @course.open_seats(course_params)
-        #     redirect_to course_path(@course)
-        # else
-        #     flash[:errors] = @course.errors.full_messages
-        #     redirect_to new_grade_path(@course)
-        # end
     end
 
     def new 
@@ -39,12 +33,7 @@ class CoursesController < ApplicationController
         redirect_to courses_path
     end
 
-    def enroll
-        # @course = Course.find(params[:id])
-        # @course.update(seat_limit: @course.seat_limit - 1)
-        @course.decrease_number_by(params[:this_number].to_i)
-        redirect_to course_path(@course)
-    end 
+    
 
 
     private
