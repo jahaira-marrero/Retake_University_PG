@@ -16,10 +16,10 @@ class GradesController < ApplicationController
     def create
         course = Course.find(params[:grade][:course_id])
         if course.open_seats > 0 && course.open_seats < 11 
-            grade = Grade.create(grade_params)
-            redirect_to student_path(grade.student_id)
+            @grade = Grade.create(grade_params)
+            redirect_to student_path(@grade.student_id)
         else
-            # flash[:errors] = errors.full_messages
+            flash[:errors] = ["Course is full.", "Choose another course."]
             redirect_to new_grade_path
         end
     end
